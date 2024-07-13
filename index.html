@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music App</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+		* {
+			font-family: "Roboto", sans-serif; /* FALLBACK FONT */
+			color: white;
+		}
+
+		.animal-div img {
+			width: 90%;
+			border-radius: 1rem;
+		}
+		
+		button {
+			border: 0;
+			background-color: lightgreen;
+			border-radius: 1rem;
+			color: black;
+		}
+		
+		button:hover {
+			background-color: black;
+			color: white;
+		}
+
+		.animal-div {
+			background-color: green;
+			width: 25%;
+			border-radius: 1rem;
+			box-shadow: 5px 5px 20px rgb(0,0,0);
+			margin: 1.5rem;
+		}
+
+		body {
+			background-color: lightgreen;
+		}
+
+		.animal-div h1 {
+			text-align: center;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.animals {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 80%;
+		}
+
+		header {
+			background-color: green;
+			display: flex;
+			align-items: center;
+			padding: 1rem;
+			border-radius: 1rem;
+		}
+
+		header h1 {
+			margin-left: 1rem;
+		}
+
+		header img {
+			width: 12%;
+			border-radius: 50%;
+			border: 4px solid lightgreen;
+		}
+
+		#leaf1 {
+			width: 15%;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+		#leaf2 {
+			width: 15%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			transform: rotateY(180deg);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="https://storage.googleapis.com/pai-images/5452684911044eee857ded6e31e2447c.jpeg" alt="">
+		<h1>SOUNDS OF JUNGLE</h1>
+	</header>
+	<img id="leaf1" src="leaf.png" alt="">
+	<img id="leaf2" src="leaf.png" alt="">
+	<center>
+		<div class="animals">
+			<div class="animal-div">
+				<center>
+					<h1>CAT</h1>
+					<audio id="cat">
+						<source src="./music/cat.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+					<button onclick="playMusic('cat')">PLAY</button>
+					<button onclick="pauseMusic('cat')">PAUSE</button>
+				</center>
+			</div>
+
+			<div class="animal-div">
+				<center>
+					<h1>TIGER</h1>
+					<audio id="tiger">
+						<source src="./music/tiger.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://i.natgeofe.com/k/60ca05c4-d549-4bfd-a86b-f7e50e68b7a8/photoark-tiger_square.png" alt="">		
+					<button onclick="playMusic('tiger')">PLAY</button>
+					<button onclick="pauseMusic('tiger')">PAUSE</button>
+				</center>
+			</div>
+
+			<div class="animal-div">
+				<center>
+					<h1>DOG</h1>
+					<audio id="dog">
+						<source src="./music/dog.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_square.jpg" alt="">		
+					<button onclick="playMusic('dog')">PLAY</button>
+					<button onclick="pauseMusic('dog')">PAUSE</button>
+				</center>
+			</div>
+
+			<div class="animal-div">
+				<center>
+					<h1>CHEETAH</h1>
+					<audio id="cheetah">
+						<source src="./music/cheetah.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://i.natgeofe.com/k/66d3a80c-f4c3-4410-845c-3543375eaa85/cheetah-watching_square.jpg" alt="">		
+					<button onclick="playMusic('cheetah')">PLAY</button>
+					<button onclick="pauseMusic('cheetah')">PAUSE</button>
+				</center>
+			</div>
+
+			<div class="animal-div">
+				<center>
+					<h1>WOLF</h1>
+					<audio id="wolf">
+						<source src="./music/wolf.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://wwfeu.awsassets.panda.org/img/w01049_dsc2169_20090911_8100a_wolf__c__ralph_frank_wwf_546040.jpg" alt="">		
+					<button onclick="playMusic('wolf')">PLAY</button>
+					<button onclick="pauseMusic('wolf')">PAUSE</button>
+				</center>
+			</div>
+
+			<div class="animal-div">
+				<center>
+					<h1>ELEPHANT</h1>
+					<audio id="elephant">
+						<source src="./music/elephant.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvZmwyNjAwNjMyMjYwNC1pbWFnZS1renhsdWpwNS5qcGc.jpg" alt="">		
+					<button onclick="playMusic('elephant')">PLAY</button>
+					<button onclick="pauseMusic('elephant')">PAUSE</button>
+				</center>
+			</div>
+
+			<div class="animal-div">
+				<center>
+					<h1>PEACOCK</h1>
+					<audio id="peacock">
+						<source src="./music/peacock.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://img.freepik.com/premium-photo/colorful-peacock-with-white-background-blue-tail_900101-27273.jpg" alt="">		
+					<button onclick="playMusic('peacock')">PLAY</button>
+					<button onclick="pauseMusic('peacock')">PAUSE</button>
+				</center>
+			</div>
+
+			<div class="animal-div">
+				<center>
+					<h1>EAGLE</h1>
+					<audio id="eagle">
+						<source src="./music/eagle.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://optimise2.assets-servd.host/maniacal-finch/production/animals/bald-eagle-01.jpg?w=1200&h=1200&auto=compress%2Cformat&fit=crop&dm=1660139059&s=0a8ce957e6d5d7edde860b055335209c" alt="">		
+					<button onclick="playMusic('eagle')">PLAY</button>
+					<button onclick="pauseMusic('eagle')">PAUSE</button>
+				</center>
+			</div>
+            
+            <div class="animal-div">
+				<center>
+					<h1>DUCK</h1>
+					<audio id="duck">
+						<source src="./music/duck.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/800px-Anas_platyrhynchos_male_female_quadrat.jpg" alt="">		
+					<button onclick="playMusic('duck')">PLAY</button>
+					<button onclick="pauseMusic('duck')">PAUSE</button>
+				</center>
+			</div>
+            
+            <div class="animal-div">
+				<center>
+					<h1>CROW</h1>
+					<audio id="crow">
+						<source src="./music/crow.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://i.natgeofe.com/k/d29dfa7c-ef72-4db6-b47e-1c1f08ec8a13/crow-ground_square.jpg" alt="">		
+					<button onclick="playMusic('crow')">PLAY</button>
+					<button onclick="pauseMusic('crow')">PAUSE</button>
+				</center>
+			</div>
+            
+            <div class="animal-div">
+				<center>
+					<h1>HEN</h1>
+					<audio id="hen">
+						<source src="./music/hen.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://tiimg.tistatic.com/fp/1/007/605/natural-healthy-brown-color-poultry-country-hen-495.jpg" alt="">		
+					<button onclick="playMusic('hen')">PLAY</button>
+					<button onclick="pauseMusic('hen')">PAUSE</button>
+				</center>
+			</div>
+            
+            <div class="animal-div">
+				<center>
+					<h1>ROOSTER</h1>
+					<audio id="cock">
+						<source src="./music/cock.mp3" type="audio/mp3">
+					</audio>
+					<img src="https://media.istockphoto.com/id/480162461/vector/rooster-cock.jpg?s=612x612&w=0&k=20&c=9B6OHRdOKbj5bxoSqOaocvBsjCEGQbQVUB0W1GNuFs4=" alt="">		
+					<button onclick="playMusic('cock')">PLAY</button>
+					<button onclick="pauseMusic('cock')">PAUSE</button>
+				</center>
+			</div>
+
+
+
+		</div>
+	</center>
+	<script type="text/javascript">
+		function playMusic(id){
+			const aud = document.getElementById(id);
+			aud.play();
+		}
+		function pauseMusic(id){
+			const aud = document.getElementById(id);
+			aud.pause();
+		}
+	</script>
+</body>
+</html>
